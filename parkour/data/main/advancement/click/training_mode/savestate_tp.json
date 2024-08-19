@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "use_item": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": { "tm_tp_to_save":true }
+          }
+        }
+      }
+    }
+  },
+  "rewards": { "function": "main:training_mode/save_pos/tp/tp" }
+}

@@ -1,0 +1,2 @@
+execute as @s[nbt={Inventory:[{Slot:-106b,components:{"minecraft:custom_data":{"tm_timer":true},"minecraft:enchantment_glint_override":true}}]},tag=timer_on] run function main:timer/main/timer/stop
+execute as @s[nbt={Inventory:[{components:{"minecraft:custom_data":{"tm_timer":true},"minecraft:enchantment_glint_override":true}}]},nbt=!{Inventory:[{Slot:-106b,components:{"minecraft:custom_data":{"tm_timer":true},"minecraft:enchantment_glint_override":true}}]},tag=!timer_on] run function main:timer/main/timer/start

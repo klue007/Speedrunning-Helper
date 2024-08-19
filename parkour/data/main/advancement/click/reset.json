@@ -1,0 +1,16 @@
+{
+    "criteria": {
+      "use_item": {
+        "trigger": "minecraft:using_item",
+        "conditions": {
+          "item": {
+            "predicates": {
+              "minecraft:custom_data": { "reset":true }
+            }
+          }
+        }
+      }
+    },
+    "rewards": { "function": "main:click/reset" }
+  }
+  

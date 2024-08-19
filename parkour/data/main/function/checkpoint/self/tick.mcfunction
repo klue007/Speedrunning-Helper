@@ -1,0 +1,1 @@
+execute unless block ~ ~ ~ light_weighted_pressure_plate run setblock ~ ~ ~ light_weighted_pressure_plate

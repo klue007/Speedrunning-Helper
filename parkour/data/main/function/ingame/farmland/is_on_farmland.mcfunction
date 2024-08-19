@@ -1,0 +1,9 @@
+execute if block ~ ~ ~ farmland run scoreboard players set @s on_farmland 1
+execute if block ~.3 ~ ~ farmland run scoreboard players set @s on_farmland 1
+execute if block ~-.3 ~ ~ farmland run scoreboard players set @s on_farmland 1
+execute if block ~ ~ ~.3 farmland run scoreboard players set @s on_farmland 1
+execute if block ~ ~ ~-.3 farmland run scoreboard players set @s on_farmland 1
+execute if block ~.3 ~ ~.3 farmland run scoreboard players set @s on_farmland 1
+execute if block ~.3 ~ ~-.3 farmland run scoreboard players set @s on_farmland 1
+execute if block ~-.3 ~ ~.3 farmland run scoreboard players set @s on_farmland 1
+execute if block ~-.3 ~ ~-.3 farmland run scoreboard players set @s on_farmland 1

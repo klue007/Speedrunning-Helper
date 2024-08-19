@@ -1,0 +1,1 @@
+execute as @e[tag=pb] if score @s ID = @p ID if score @s checkpoint = @p checkpoint run scoreboard players operation @s pb = @p pb_timer_tick

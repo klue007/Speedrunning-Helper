@@ -1,0 +1,1 @@
+execute as @e[tag=pb_total] if score @s ID = @p ID run scoreboard players operation @s pb = @p timer_tick

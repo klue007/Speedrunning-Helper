@@ -1,0 +1,3 @@
+$execute if entity @s[nbt=!{Inventory:[{Slot:7b,components:{"minecraft:custom_data":{"tm_tp_to_save":true}}}]}] if data storage tm_savestate data[{"UUID":$(UUID)}] run function main:training_mode/save_pos/give_item with storage tm_savestate data[{"UUID":$(UUID)}]
+
+execute if entity @s[nbt={Inventory:[{Slot:-106b,components:{"minecraft:custom_data":{"tm_tp_to_save":true}}}]}] run function main:training_mode/save_pos/remove with entity @s

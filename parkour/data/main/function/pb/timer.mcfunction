@@ -1,0 +1,1 @@
+execute as @a[tag=timer_on,team=ingame] run scoreboard players add @s pb_timer_tick 1

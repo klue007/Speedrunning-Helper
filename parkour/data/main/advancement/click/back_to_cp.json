@@ -1,0 +1,16 @@
+{
+    "criteria": {
+      "use_item": {
+        "trigger": "minecraft:using_item",
+        "conditions": {
+          "item": {
+            "predicates": {
+              "minecraft:custom_data": { "back_cp":true }
+            }
+          }
+        }
+      }
+    },
+    "rewards": { "function": "main:click/back_to_cp" }
+  }
+  

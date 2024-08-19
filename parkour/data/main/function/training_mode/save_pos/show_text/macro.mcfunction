@@ -1,0 +1,1 @@
+$function main:training_mode/save_pos/show_text/macro2 with storage tm_savestate data[{"UUID":$(UUID)}]
