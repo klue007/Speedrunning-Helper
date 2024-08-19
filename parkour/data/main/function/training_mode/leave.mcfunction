@@ -1,7 +1,7 @@
 title @s clear
 title @s times 0 20 15
 title @s title [""]
-title @s subtitle [{"text": "已禁用练习模式","bold": true,"color": "red"}]
+title @s subtitle [{"text": "Disabled training mode","bold": true,"color": "red"}]
 scoreboard players set @s training_mode 0
 function main:timer/main/timer/reset
 tag @s remove timer_display

@@ -3,7 +3,7 @@ playsound entity.lightning_bolt.thunder master @s ~ ~ ~ 9999 1
 title @s clear
 title @s times 0 20 15
 title @s title [""]
-title @s subtitle [{"text": "跑酷挑战已完成","bold": true,"color": "gold"}]
+title @s subtitle [{"text": "Finished!","bold": true,"color": "gold"}]
 particle totem_of_undying ~ ~0.8 ~ 0.75 0.75 0.75 0.2 50
 function main:timer/main/timer/stop
 execute at @e[tag=checkpoint,limit=1,sort=nearest] run spawnpoint @s ~ ~ ~ ~
@@ -32,9 +32,9 @@ execute as @s[scores={pb=-1..-1}] run function main:checkpoint/display/total
 execute as @s[scores={pb=0..}] if score @s dt_tick matches ..0 run function main:checkpoint/display/total2
 execute as @s[scores={pb=0..}] if score @s dt_tick matches 1.. run function main:checkpoint/display/total3
 execute if score @s pb matches -1 run function main:pb/store_pb/total_new
-execute if score @s pb matches -1 run tellraw @s [{"text": "你打破了你的个人最佳记录.","color": "gray"}]
-execute if score @s pb <= @s timer_tick unless score @s pb matches -1 run tellraw @s [{"text": "你没有打破你的个人最佳记录.","color": "gray"}]
-execute if score @s pb > @s timer_tick unless score @s pb matches -1 run tellraw @s [{"text": "你打破了你的个人最佳记录.","color": "gray"}]
+execute if score @s pb matches -1 run tellraw @s [{"text": "You beat your old PB.","color": "gray"}]
+execute if score @s pb <= @s timer_tick unless score @s pb matches -1 run tellraw @s [{"text": "You didn't beat your PB.","color": "gray"}]
+execute if score @s pb > @s timer_tick unless score @s pb matches -1 run tellraw @s [{"text": "You beat your PB.","color": "gray"}]
 execute if score @s pb > @s timer_tick run function main:pb/store_pb/total_update
 
 function main:pb/get_pb/checkpoint

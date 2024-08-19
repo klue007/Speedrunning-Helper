@@ -2,7 +2,7 @@ playsound entity.experience_orb.pickup master @s ~ ~ ~ 9999 1
 title @s clear
 title @s times 0 20 15
 title @s title [""]
-title @s subtitle [{"text": "已抵达检查点","bold": true,"color": "gold"}]
+title @s subtitle [{"text": "Checkpoint set!","bold": true,"color": "gold"}]
 execute at @e[tag=checkpoint,limit=1,sort=nearest] run spawnpoint @s ~ ~ ~ ~
 particle totem_of_undying ~ ~0.8 ~ 0.75 0.75 0.75 0.2 50
 

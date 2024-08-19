@@ -64,13 +64,13 @@ scoreboard objectives add checkpoint_display dummy ["checkpoint_display"]
 scoreboard objectives add checkpoint_next dummy ["checkpoint_next"]
 
 #trigger
-scoreboard objectives add tools trigger [{"text": "快捷工具","bold":true,"color": "yellow"}]
-scoreboard objectives add restart trigger [{"text": "重新开始","bold":true,"color": "yellow"}]
-scoreboard objectives add back trigger [{"text": "返回检查点","bold":true,"color": "yellow"}]
-scoreboard objectives add training_mode trigger [{"text": "练习模式","bold":true,"color": "aqua"}]
-scoreboard objectives add reset_pb trigger [{"text": "重置个人最佳记录","bold":true,"color": "yellow"}]
-scoreboard objectives add show_pb trigger [{"text": "显示个人最佳记录","bold":true,"color": "yellow"}]
-scoreboard objectives add show_sum_of_best trigger [{"text": "显示个人理论最佳记录","bold":true,"color": "yellow"}]
+scoreboard objectives add tools trigger [{"text": "Tools","bold":true,"color": "yellow"}]
+scoreboard objectives add restart trigger [{"text": "Restart","bold":true,"color": "yellow"}]
+scoreboard objectives add back trigger [{"text": "Back to Checkpoint","bold":true,"color": "yellow"}]
+scoreboard objectives add training_mode trigger [{"text": "Training Mode","bold":true,"color": "aqua"}]
+scoreboard objectives add reset_pb trigger [{"text": "Reset PB","bold":true,"color": "yellow"}]
+scoreboard objectives add show_pb trigger [{"text": "Show PB","bold":true,"color": "yellow"}]
+scoreboard objectives add show_sum_of_best trigger [{"text": "Show Sum of Best","bold":true,"color": "yellow"}]
 
 #training mode
 scoreboard objectives add click_delay dummy "click_delay"
