@@ -1,4 +1,4 @@
-execute as @e[tag=checkpoint] run data merge entity @s {Duration:999999}
+execute as @e[tag=checkpoint] run data merge entity @s {Age:0}
 
 execute as @e[tag=checkpoint] at @s run function main:checkpoint/self/tick
 
