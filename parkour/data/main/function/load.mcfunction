@@ -71,9 +71,14 @@ scoreboard objectives add training_mode trigger [{"text": "练习模式","bold":
 scoreboard objectives add reset_pb trigger [{"text": "重置个人最佳记录","bold":true,"color": "yellow"}]
 scoreboard objectives add show_pb trigger [{"text": "显示个人最佳记录","bold":true,"color": "yellow"}]
 scoreboard objectives add show_sum_of_best trigger [{"text": "显示个人理论最佳记录","bold":true,"color": "yellow"}]
+scoreboard objectives add only_sprint trigger [{"text": "Only Sprint模式","bold": true,"color": "yellow"}]
 
 #training mode
 scoreboard objectives add click_delay dummy "click_delay"
+
+#Only Sprint mode
+scoreboard objectives add only_sprint_enabled dummy "only_sprint_enabled"
+scoreboard objectives add only_sprint_enabled_changed dummy "only_sprint_enabled"
 
 ####### Team #######
 team add ingame

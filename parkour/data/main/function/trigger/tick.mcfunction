@@ -40,3 +40,11 @@ execute as @a if score @s tools matches 1.. if entity @s[tag=!tools,tag=!tools_h
 execute as @a if score @s tools matches 1.. if entity @s[tag=!tools,tag=!tools_hide] run tag @s add tools
 execute as @a if score @s tools matches 1.. as @s[tag=tools_hide] run tag @s remove tools_hide
 execute as @a unless score @s tools matches 0 run scoreboard players set @s tools 0
+
+scoreboard players enable @a only_sprint
+execute as @a[scores={only_sprint=1..}] unless score @s only_sprint_enabled matches 1 at @s run scoreboard players set @s only_sprint_enabled_changed 1
+execute as @a[scores={only_sprint=1..}] unless score @s only_sprint_enabled matches 1 at @s run tellraw @s [{"text": "Only Sprint模式已启用.","color": "gray"}]
+execute as @a[scores={only_sprint=1..}] if score @s only_sprint_enabled matches 1 at @s run scoreboard players set @s only_sprint_enabled_changed 0
+execute as @a[scores={only_sprint=1..}] if score @s only_sprint_enabled matches 1 at @s run tellraw @s [{"text": "Only Sprint模式已禁用.","color": "gray"}]
+execute as @a[scores={only_sprint=1..}] run scoreboard players operation @s only_sprint_enabled = @s only_sprint_enabled_changed
+execute as @a[scores={only_sprint=1..}] run scoreboard players set @s only_sprint 0

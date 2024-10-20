@@ -8,3 +8,5 @@ function main:checkpoint/get_max_checkpoint
 function main:training_mode/tick
 
 execute as @a[tag=!joined] at @s run function main:join
+
+execute as @a[team=ingame,tag=timer_on,gamemode=adventure] if score @s only_sprint_enabled matches 1 at @s unless entity @e[tag=checkpoint,distance=..1.5] unless function main:only_sprint_check_water unless entity @s[predicate=main:sprinting] run function main:only_sprint_back
