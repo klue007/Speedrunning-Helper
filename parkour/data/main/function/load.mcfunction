@@ -71,6 +71,7 @@ scoreboard objectives add training_mode trigger [{"text": "Training Mode","bold"
 scoreboard objectives add reset_pb trigger [{"text": "Reset PB","bold":true,"color": "yellow"}]
 scoreboard objectives add show_pb trigger [{"text": "Show PB","bold":true,"color": "yellow"}]
 scoreboard objectives add show_sum_of_best trigger [{"text": "Show Sum of Best","bold":true,"color": "yellow"}]
+scoreboard objectives add onlysprint trigger [{"text": "OnlySprint Mode","bold": true,"color": "yellow"}]
 
 #training mode
 scoreboard objectives add click_delay dummy "click_delay"
