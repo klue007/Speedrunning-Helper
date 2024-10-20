@@ -3,9 +3,9 @@ execute as @a run function main:timer/main/calculate
 execute as @a run scoreboard players operation @s checkpoint_display = @s checkpoint
 execute as @a run scoreboard players remove @s checkpoint_display 1
 execute as @a[scores={checkpoint_display=..-1}] run scoreboard players set @s checkpoint_display 0
-execute as @a[scores={pb=-1..-1}] unless score @s only_sprint_enabled matches 1 run function main:timer/main/display
-execute as @a[scores={pb=0..}] unless score @s only_sprint_enabled matches 1 if score @s dt_tick matches ..0 run function main:timer/main/display2
-execute as @a[scores={pb=0..}] unless score @s only_sprint_enabled matches 1 if score @s dt_tick matches 1.. run function main:timer/main/display3
-execute as @a[scores={pb=-1..-1}] if score @s only_sprint_enabled matches 1 run function main:timer/main/display_only_sprint
-execute as @a[scores={pb=0..}] if score @s only_sprint_enabled matches 1 if score @s dt_tick matches ..0 run function main:timer/main/display2_only_sprint
-execute as @a[scores={pb=0..}] if score @s only_sprint_enabled matches 1 if score @s dt_tick matches 1.. run function main:timer/main/display3_only_sprint
+execute as @a[scores={pb=-1..-1}] unless score @s onlysprint_enabled matches 1 run function main:timer/main/display
+execute as @a[scores={pb=0..}] unless score @s onlysprint_enabled matches 1 if score @s dt_tick matches ..0 run function main:timer/main/display2
+execute as @a[scores={pb=0..}] unless score @s onlysprint_enabled matches 1 if score @s dt_tick matches 1.. run function main:timer/main/display3
+execute as @a[scores={pb=-1..-1}] if score @s onlysprint_enabled matches 1 run function main:timer/main/display_onlysprint
+execute as @a[scores={pb=0..}] if score @s onlysprint_enabled matches 1 if score @s dt_tick matches ..0 run function main:timer/main/display2_onlysprint
+execute as @a[scores={pb=0..}] if score @s onlysprint_enabled matches 1 if score @s dt_tick matches 1.. run function main:timer/main/display3_onlysprint
