@@ -75,6 +75,10 @@ scoreboard objectives add show_sum_of_best trigger [{"text": "Show Sum of Best",
 #training mode
 scoreboard objectives add click_delay dummy "click_delay"
 
+#OnlySprint mode
+scoreboard objectives add onlysprint_enabled dummy "onlysprint_enabled"
+scoreboard objectives add onlysprint_enabled_changed dummy "onlysprint_enabled"
+
 ####### Team #######
 team add ingame
 team add training_mode

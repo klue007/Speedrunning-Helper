@@ -23,6 +23,7 @@ execute as @a[scores={reset_pb=1..}] run scoreboard players set @s reset_pb 0
 
 scoreboard players enable @a[scores={show_pb=-2..-2}] show_pb
 execute as @a unless score @s show_pb matches -2147483648..2147483647 run scoreboard players set @s show_pb -2
+execute as @a[scores={show_pb=-1..},tag=!show_pb] at @s run scoreboard players set @s show_pb -1
 execute as @a[scores={show_pb=-1..}] at @s run function main:trigger/show_pb/tick
 execute as @a if score @s show_pb > max_checkpoint checkpoint run scoreboard players set @s show_pb -2
 
@@ -40,3 +41,11 @@ execute as @a if score @s tools matches 1.. if entity @s[tag=!tools,tag=!tools_h
 execute as @a if score @s tools matches 1.. if entity @s[tag=!tools,tag=!tools_hide] run tag @s add tools
 execute as @a if score @s tools matches 1.. as @s[tag=tools_hide] run tag @s remove tools_hide
 execute as @a unless score @s tools matches 0 run scoreboard players set @s tools 0
+
+scoreboard players enable @a onlysprint
+execute as @a[scores={onlysprint=1..}] unless score @s onlysprint_enabled matches 1 at @s run scoreboard players set @s onlysprint_enabled_changed 1
+execute as @a[scores={onlysprint=1..}] unless score @s onlysprint_enabled matches 1 at @s run tellraw @s [{"text": "OnlySprint mode enabled.","color": "gray"}]
+execute as @a[scores={onlysprint=1..}] if score @s onlysprint_enabled matches 1 at @s run scoreboard players set @s onlysprint_enabled_changed 0
+execute as @a[scores={onlysprint=1..}] if score @s onlysprint_enabled matches 1 at @s run tellraw @s [{"text": "OnlySprint mode disabled.","color": "gray"}]
+execute as @a[scores={onlysprint=1..}] run scoreboard players operation @s onlysprint_enabled = @s onlysprint_enabled_changed
+execute as @a[scores={onlysprint=1..}] run scoreboard players set @s onlysprint 0
